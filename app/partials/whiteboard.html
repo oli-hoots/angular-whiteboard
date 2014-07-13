@@ -1,0 +1,28 @@
+Choose tool:
+<select ng-model="tool" ng-change="swapTool()">
+    <option value="pen">pen</option>
+    <option value="line">line</option>
+    <option value="rectangle">rectangle</option>
+</select>
+
+Stroke Color:
+<select ng-model="strokeColor" ng-change="setStrokeStyle()">
+    <option value="#000">black</option>
+    <option value="#F00">red</option>
+    <option value="#0F0">green</option>
+    <option value="#00F">blue</option>
+</select>
+
+Stroke Size:
+<select ng-model="lineWidth" ng-change="setLineWidth()">
+    <option value="1">thin</option>
+    <option value="3">normal</option>
+    <option value="5">thick</option>
+</select>
+
+<button ng-click="clearCanvas()">Reset</button>
+
+<br />
+
+<!--  Canvas with whiteboard directive ('data' prefix for validity)-->
+<canvas width="700" height="400" data-wb-whiteboard></canvas>
